@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Poppins&display=swap");
+
+$bg-color: #cfcfcf;
+$text-color: #666;
+$content-font: "Poppins", sans-serif;
+$title-font: "Alkalami", serif;
+
+:root {
+  --bg-color: #{$bg-color};
+  --text-color: #{$text-color};
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  font-family: $content-font;
+}
+
+//changer la polices des titres
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+}
+
+//etirer le centre afin que le footer soit touours collé au bas (si la page n'est pas assez longue)
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
